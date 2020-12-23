@@ -31,9 +31,11 @@ end
 -- end
 
 function guiText (playerid)
-    drawText(playerid, -1, 0.4, 0.5, 0.2, 0.54, "Hello ~r~Red", 0, 0xFFFFFFFF)
+    if(string.sub(text, 1, 6) == "/point") then
+        drawText(playerid, 10, 0.4, 0.5, 0.2, 0.54, "Hello ~r~Red", 0, 0xFFFFFFFF)
+	end
 end
-registerEvent("guiText", "onPlayerCredential")
+registerEvent("guiText", "onPlayerCommand")
 
 function changePoints(playerid, text)
 	if(string.sub(text, 1, 6) == "/score") then
@@ -41,3 +43,4 @@ function changePoints(playerid, text)
 	end
 end
 registerEvent("changePoints", "onPlayerCommand")
+
