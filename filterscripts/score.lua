@@ -32,9 +32,8 @@ end
 
 function guiText (playerid, text)
     if(string.sub(text, 1, 6) == "/point") then
-        print("text")
         drawText(playerid, 10, 0.4, 0.5, 0.2, 0.54, "Test", 0, 0xFFFFFFFF)
-	end
+    end
 end
 registerEvent("guiText", "onPlayerCommand")
 
