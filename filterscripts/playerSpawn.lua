@@ -1,7 +1,3 @@
-local spawnInfo = {
-	{2000.0, 200.0, 15.0, 10, 0xFF0000FF}
-}
-
 local windowID = 200
 
 local function createDialog()
@@ -25,11 +21,13 @@ registerEvent("pickTeam", "onPlayerCredential")
 
 function onDialogResponse (playerid, dialogid, buttonid, dialogRow)
 	if (dialogid == windowID and buttonid == 1) then
-		spawnPlayer(playerid, spawnInfo[sId][1], spawnInfo[sId][2], 10)
+		setPlayerSkin(playerid, 10)
+		spawnPlayer(playerid, 2000.0, 200.0, 15.0)
 		sendMsgToAll(getPlayerName(playerid) .. "(" .. playerid .. ") joined the red team", 0xFFFFFFFF)
 		setPlayerColor(playerid, 0xFF0000FF)
 	elseif (dialogid == windowID and buttonId == 2) then
-		spawnPlayer(playerid, spawnInfo[sId][1], spawnInfo[sId][2], 11)
+		setPlayerSkin(playerid, 11)
+		spawnPlayer(playerid, 2000.0, 200.0, 15.0)
 		sendMsgToAll(getPlayerName(playerid) .. "(" .. playerid .. ") joined the blue team", 0xFFFFFFFF)
 		setPlayerColor(playerid, 0x0000FFFF)
 	else
