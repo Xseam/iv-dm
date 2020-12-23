@@ -30,3 +30,14 @@ end
 
 -- end
 
+function guiText (playerid)
+    drawText(playerid, -1, 0.4, 0.5, 0.2, 0.54, "Hello ~r~Red", 0, 0xFFFFFFFF)
+end
+registerEvent("guiText", "onPlayerCredential")
+
+function changePoints(playerid, text)
+	if(string.sub(text, 1, 56 == "/score") then
+		redKills = redKills + 1
+	end
+end
+registerEvent("changePoints", "onPlayerCommand")
