@@ -36,7 +36,7 @@ end
 registerEvent("guiText", "onPlayerCredential")
 
 function changePoints(playerid, text)
-	if(string.sub(text, 1, 56 == "/score") then
+	if(string.sub(text, 1, 6) == "/score") then
 		redKills = redKills + 1
 	end
 end
