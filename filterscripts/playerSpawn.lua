@@ -25,13 +25,14 @@ function onDialogResponse (playerid, dialogid, buttonid, dialogRow)
 		spawnPlayer(playerid, 2000.0, 200.0, 15.0)
 		sendMsgToAll(getPlayerName(playerid) .. "(" .. playerid .. ") joined the red team", 0xFFFFFFFF)
 		setPlayerColor(playerid, 0xFF0000FF)
-	elseif (dialogid == windowID and buttonId == 2) then
+	elseif (dialogid == windowID and buttonid == 2) then
 		setPlayerSkin(playerid, 11)
 		spawnPlayer(playerid, 2000.0, 200.0, 15.0)
 		sendMsgToAll(getPlayerName(playerid) .. "(" .. playerid .. ") joined the blue team", 0xFFFFFFFF)
 		setPlayerColor(playerid, 0x0000FFFF)
 	else
 		sendPlayerMsg(playerid, "Nothing picked", 0xFFFF0000)
+		
 	end
 end
 registerEvent("onDialogResponse", "onPlayerDialogResponse")
