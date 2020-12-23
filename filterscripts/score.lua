@@ -11,7 +11,7 @@ function killCounter (playerid, lastDamageType, lastDamageGiver)
         elseif getPlayerColor(lastDamageGiver) == 0x0000FFFF then
             blueKills = blueKills + 1
         else
-            ("could not assign the point")
+            print("could not assign the point")
         end
     else
         print("error on killCounter")
