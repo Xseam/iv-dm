@@ -4,5 +4,6 @@ require("/filterscripts/utility/scriptLoader")
 --I load the following scripts like this so I can reload them whenever using the rcon script
 loadScript("rcon")
 loadScript("playerSpawn")
+loadScript("score")
 
 setWorldMinuteDuration(1, 0)
