@@ -34,14 +34,15 @@ function drawScore()
 	local players = getPlayers()
 		
 	for i, id in ipairs(players) do
-		drawInfoText(id, "~b~Red:~w~ " .. redKills .. " | ~r~Blue:~w~ "..blueKills, 600)
+		drawInfoText(id, "~b~Red:~w~ " .. redKills .. " | ~r~Blue:~w~ "..blueKills.."", 600)
 	end
 end
 local speedoTimer = setTimer("drawScore", 150, 0)
 
 function changePoints(playerid, text)
 	if(string.sub(text, 1, 6) == "/score") then
-		redKills = redKills + 1
+        redKills = redKills + 1
+        sendPlayerMsg(playerid, "Position saved!: x: "..x..", y: "..y..", z: "..z..")", 0xFFFF00FF)
 	end
 end
 registerEvent("changePoints", "onPlayerCommand")
