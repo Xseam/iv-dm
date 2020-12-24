@@ -34,7 +34,7 @@ function drawScore()
 	local players = getPlayers()
 		
 	for i, id in ipairs(players) do
-		drawInfoText(id, "~b~Red:~w~ " .. redKills .. " | ~r~Blue:~w~ "..blueKills.."", 600)
+		drawInfoText(id, "~r~Red:~w~ " .. redKills .. " | ~b~Blue:~w~ "..blueKills.."", 600)
 	end
 end
 local speedoTimer = setTimer("drawScore", 150, 0)
