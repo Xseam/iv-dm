@@ -30,12 +30,14 @@ end
 
 -- end
 
-function guiText (playerid, text)
-    if(string.sub(text, 1, 6) == "/point") then
-        drawText(playerid, 10, 0.4, 0.5, 0.2, 0.54, "Test", 0, 0xFFFFFFFF)
-    end
+function drawScore()
+	local players = getPlayers()
+		
+	for i, id in ipairs(players) do
+		drawInfoText(id, "~b~Red:~w~ " .. redKills .. " | ~r~Blue:~w~ "..blueKills, 600)
+	end
 end
-registerEvent("guiText", "onPlayerCommand")
+local speedoTimer = setTimer("drawScore", 150, 0)
 
 function changePoints(playerid, text)
 	if(string.sub(text, 1, 6) == "/score") then
